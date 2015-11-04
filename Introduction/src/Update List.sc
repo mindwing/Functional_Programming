@@ -1,55 +1,45 @@
-def f(arr: List[Int]): Int = {
-  var resVal = 0
+def f(arr: List[Int]): List[Int] = arr.map(x => math.abs(x))
 
-  for (i <- arr
-       if i % 2 != 0
-  ) {
-    resVal += i
-  }
-
-  resVal
-}
-
-val input1 = List(3, 2, 4, 6, 5, 7, 8, 0, 1)
-f(input1)
-
-val input2 = List(11, 25, 18, -1, 26, -20, -19, 23, -24, -8)
-f(input2)
-
-
-
-
+val input = List(2, -4, 3, -1, 23, -4, -54)
+f(input)
 
 /*
 Problem Statement
 
-Return sum of odd elements from an list. The input and output portions will be handled automatically. You need to write a function with the recommended method signature.
+Update the values of a list with their absolute values. The input and output portions will be handled automatically during grading. You only need to write a function with the recommended method signature.
 
-Constraints
-The list will have 1-100 elements. Each element will be an integer X such that -100<=X<=100.
+Input Format
+There are N integers, each on a new line. These are the N elements of the input array.
+
+Output Format
+N integers each on a new line; these are the absolute values of the input list, in that order.
 
 Sample Input
 
-3
 2
-4
-6
-5
-7
-8
-0
-1
+-4
+3
+-1
+23
+-4
+-54
 Sample Output
 
-16
-Explanation
-Sum of odd elements = 3 + 5 + 7 + 1 = 16
+2
+4
+3
+1
+23
+4
+54
+Constraints
+The list will have no more than 100 integers. The list will be composed of integers X such that -100 <= X <= 100.
 
-Method Signature
+Recommended Method Signature
 
 Number Of Parameters: 1
 Parameters: [list]
-Returns: Number
+Returns: List or Vector
 For Hackers Using Clojure
 
 This will be the outline of your function body (fill up the blank portion marked by underscores):
@@ -58,11 +48,11 @@ This will be the outline of your function body (fill up the blank portion marked
 For Hackers Using Scala
 This will be the outline of your function body (fill up the blank portion marked by underscores):
 
- def f(arr:List[Int]):Int = __________________
+ def f(arr:List[Int]):List[Int] = __________________
 For Hackers Using Haskell
 This will be the outline of your function body (fill up the blank portion marked by underscores):
 
- f arr = ______________________
+f arr = ___________________
 For Hackers Using other Languages
 You have to read input from standard input and write output to standard output. Please follow input/output format mentioned above.
 
